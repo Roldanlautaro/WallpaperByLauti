@@ -51,7 +51,7 @@ El proyecto fue desarrollado utilizando las siguientes tecnologías y herramient
 ![Móvil](https://github.com/user-attachments/assets/88776196-5f17-4429-b39a-c177014fb3f1)
 
 ### Pantalla Escritorio
-![Escritorio]![Screenshot 2024-12-09 193437](https://github.com/user-attachments/assets/23013164-7805-4adb-b97a-78f672b1d0f6)
+![Escritorio](https://github.com/user-attachments/assets/23013164-7805-4adb-b97a-78f672b1d0f6)
 
 
 ### Pantalla Descarga
