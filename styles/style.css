@@ -1,0 +1,1039 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#f9f6f7;
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    
+}
+
+
+/* header */
+
+
+#menuLista {
+  display: flex;
+  align-items: center;
+  margin: 0; 
+  padding: 0; 
+}
+
+.icon-hamburger:hover{
+  transform: rotateY(17deg) rotateX(17deg) scale(1.15);
+}
+
+.subir-foto {
+  cursor: pointer;
+}
+nav {
+  padding: 0px 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #fff;
+  position: relative;
+  height: 70px;
+  z-index: 10;
+}
+
+
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul li a::before{
+  margin: auto;
+}
+
+nav ul li a::after, nav ul li a::before{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: black;
+  display: block;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after, nav ul li a:hover::before{
+  width: 100%;
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+.bi-arrow-bar-up {
+  font-size: 25px;
+}
+
+.bi-arrow-bar-up:hover {
+  transform: scale(1.1); 
+}
+
+
+
+
+
+.icon-hamburger{
+    width: 30px ;
+}
+
+
+.btn-inicio {
+  font-size: 14px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background-color:#f9f6f7;
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #000000;
+  height: 2.3em;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.btn-inicio:hover {
+  transform: translateY(-0.1em);
+  box-shadow: 0px 0.1em 0.2em rgba(45, 35, 66, 0.192), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #000000;
+}
+
+.btn-inicio:active {
+  transform: translateY(0em);
+} 
+
+
+
+
+
+
+/* darkmode */
+
+
+
+.theme {
+  --bg-color: #fff;
+  --main-color: #323232;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border: 1.5px solid var(--main-color);
+  box-shadow: 3px 3px var(--main-color);
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+}
+
+.icon.icon-moon {
+  fill: var(--main-color);
+}
+
+.icon.icon-sun {
+  stroke: var(--main-color);
+  display: none;
+}
+
+.input:checked ~ .icon.icon-sun {
+  display: block;
+}
+
+.input:checked ~ .icon.icon-moon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(2px, 2px);
+}
+  
+
+
+
+.usuario-logo {
+  position: relative;
+  display: inline-block;
+  margin-left: auto; /* Alinea el contenedor a la derecha */
+}
+
+
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0; /* Alinea el dropdown a la derecha */
+}
+
+
+.dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.bi-person-fill {
+  cursor: pointer;
+  font-size: 25px;
+  
+}
+
+
+
+
+/* Main */
+
+main{
+  min-height: 100vh;
+}
+
+.barra-movil,
+.barra-escritorio,
+.barra-configuracion {
+  color: black;
+  text-align: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px;
+  z-index: 1; 
+  position: relative; 
+  margin-bottom: 10px;
+  
+}
+
+
+
+
+
+/* Estilo del botón flotante */
+
+
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  display: none; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s; 
+  z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+
+.scroll-top-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+/* Efecto movimiento */
+.spinner {
+  --size: 10px;
+  --color: black;
+  width: 40px;
+  height: 100px;
+  position: relative;
+}
+
+.spinner::after,.spinner::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+  left: 50%;
+  background: var(--color);
+  box-shadow: 0 0 calc(var(--size) / 3) rgba(0, 0, 0, 0.25);
+}
+
+.spinner::after {
+  background: var(--color);
+  top: calc(50% - var(--size));
+  left: calc(50% - var(--size));
+  animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+}
+
+@keyframes down {
+  0%, 100% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+
+  75% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes up {
+  0%, 100% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+
+  75% {
+    transform: translateY(-100%);
+  }
+}
+
+
+/* Boton para fotos movil */ 
+
+.btn {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: black;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
+
+
+
+/* Fotos */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fija a 4 columnas */
+  gap: 10px;
+  padding: 0.5rem;
+}
+
+.grid-item {
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 2.5px;
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+.grid-item img:hover{
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+  
+}
+
+.grid-item img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.grid-item img::before{
+  transform: translateX(-100%);
+}
+
+
+
+/* Guia configuracion  */
+
+
+.opciones-config{
+  justify-content: space-around;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 40px;
+  background-color: black;
+  color: #fff;
+}
+
+.opciones-config h3:hover{
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.section-config {
+  min-height: 100vh;
+}
+
+.section-config .padre-config {
+  margin-bottom: 15px;
+} 
+
+.padre-config {
+  text-align: left;
+}
+
+
+.textos-config {
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  
+}
+
+/* acordeon */
+
+
+.acordeon{
+  width: 100%;
+  max-width: 120em;
+  padding: 2em;
+}
+
+.acordeon .bloque{
+  margin: 0 0 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.acordeon .h2{
+  margin: 0 0 1em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 
+  rgba(0, 0, 0, 0.1) 0px -10px 15px 0px inset, /* Sombra interna suave */
+  rgba(0, 0, 0, 0.07) 0px -20px 20px 0px inset, /* Sombra interna un poco más intensa */
+  rgba(0, 0, 0, 0.05) 0px -30px 25px 0px inset, /* Sombra interna más difusa */
+  rgba(0, 0, 0, 0.03) 0px 2px 1px,             /* Sombra externa suave */
+  rgba(0, 0, 0, 0.05) 0px 4px 2px,             /* Sombra externa más pronunciada */
+  rgba(0, 0, 0, 0.05) 0px 8px 4px,             /* Sombra externa más difusa */
+  rgba(0, 0, 0, 0.05) 0px 16px 8px;            /* Sombra externa más profunda */
+
+}
+
+.acordeon .contenido{
+  padding: 0em;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.acordeon .bloque.activo .contenido {
+  height: 7em;
+}
+
+.section-config .acordeon {
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+
+
+.footer-pie {
+    width: 100%;
+    background-color: #fff;
+  }
+
+
+.footer-pie .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.box img{
+  height: 100px;
+}
+
+
+.footer-pie .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-pie .grupo-1 .box h2{
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.footer-pie .grupo-1 .box p {
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+
+  
+/* Redes sociales*/
+
+
+
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+}
+
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #25d366;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: #Fff;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.footer-pie .grupo-2 {
+  background-color: #f3f2f2;
+  padding: 15px 10px;
+  text-align: center;
+  color: black;
+}
+
+.footer-pie .grupo-2 small {
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+/* Filtros */
+
+
+
+
+
+/* Filtros movil */
+
+
+.filtros-container button{
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* Wallpaper */
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+.wallpaper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar la imagen horizontalmente */
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.wallpaper-container img {
+  max-width: 800px; /* Tamaño máximo de la imagen */
+  height: auto; /* Mantener proporciones */
+  display: block;
+  margin-bottom: 10px; /* Espacio entre la imagen y el botón */
+}
+
+.download-button-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón de descarga a la derecha */
+}
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between; /* Alinea el "like" a la izquierda y "descargar" a la derecha */
+  width: 100%;
+  max-width: 800px; /* Coincide con el ancho de la imagen */
+  margin-top: 10px; /* Espacio entre la imagen y los botones */
+}
+
+
+
+
+/* Perfil */
+
+.foto-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.marco-perfil {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: solid #000000;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.marco-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.subidas-perfil {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #0c0c0c;
+  font-weight: bold;
+}
+
+
+.tab-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: black;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+/* Galería de fotos en fila */
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fija a 4 columnas */
+  gap: 10px;
+  padding: 0.5rem;
+}
+
+.uploaded-photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploaded-photo img {
+  width: 100%; /* La imagen toma el ancho completo del contenedor */
+  height: auto; /* Ajusta la altura para mantener la proporción */
+  object-fit: cover; /* Asegura que las imágenes no se deformen */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Estilo para el botón de guardar cambios */
+.save-changes-btn {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-changes-btn:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para el botón de eliminar foto */
+.delete-photo-btn {
+  background-color: #f44336; 
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-photo-btn:hover {
+  background-color: #e53935;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+
+@media screen and (max-width: 600px) {
+  .footer-pie .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+  .spinner {
+    display: none;
+ }
+ .barra-movil {
+  height: 100px;
+ }
+ .filtros-container button{
+  padding: 5px 10px;
+  font-size: 15px;
+ }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-pie .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+}.wallpaper-container img {
+  max-width: 500px; 
+}
+
+.download-button-container {
+  max-width: 500px; 
+}
+
+}
+
+@media screen and (max-width: 1030px) {
+
+  .menu-icon img {
+    width: 20px;
+  }
+  
+  #menuLista {
+      display: none;
+      position: absolute;
+      top: 50px; 
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      margin-top: 20px;
+      text-align: center; 
+      flex-direction: column; 
+      padding: 10px 0; 
+  }
+
+  .btn-inicio{
+    margin: 4px;
+    display: flex;
+    margin: 4px;
+    font-size: 10px;
+  }
+  #menuLista.show {
+      display: flex; 
+  }
+
+  #menuLista li {
+      margin: 10px 0; 
+  }
+  .menu-icon img {
+    margin: 6px;
+  }
+
+  .menu-icon {
+      display: block; 
+  }
+}
+
+@media screen and (min-width: 1031px) {
+  .menu-icon {
+      display: none; 
+  }
+  
+  #menuLista {
+      display: flex; 
+      justify-content: center; 
+  }
+
+  #menuLista li {
+      margin: 0 15px; 
+  }
+}

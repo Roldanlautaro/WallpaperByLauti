@@ -1,0 +1,47 @@
+body.dark{
+    background-color: #1E1E1E;
+}
+
+body.dark header h1{
+    filter: invert(1);
+}
+
+body.dark #darkmode{
+    background-position: right center;
+}
+
+body.dark h2 {
+    color: white;
+}
+
+body.dark .spinner {
+    --color: white;
+}
+
+body.dark .btn {
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+body.dark .btn:hover {
+    transform: translateY(-0.1em);
+    color: #ffffff;
+    box-shadow: 0px 0.1em 0.2em rgba(0, 0, 0, 0.192), 0px 0.4em 0.7em -0.1em rgb(0 0 0 / 30%), inset 0px -0.1em 0px #000000;
+}
+
+
+body.dark .acordeon .contenido {
+    color: #ffffff;
+}
+
+
+body.dark .download-button {
+    background-color: #ffffff;
+    color: black; 
+}
+
+body.dark .download-button:hover {
+    background-color: #000000; 
+    color: white; 
+}
+
