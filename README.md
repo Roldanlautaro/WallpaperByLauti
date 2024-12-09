@@ -67,6 +67,10 @@ El proyecto fue desarrollado utilizando las siguientes tecnologías y herramient
 ![Perfil](https://github.com/user-attachments/assets/41a3f3dc-8f2a-4732-9022-32ba9a0d6d09)
 
 
+### Formulario
+![Formulario](https://github.com/user-attachments/assets/8ad8fdb8-1811-4180-bec6-f1e53db6a2b6)
+
+
 ---
 
 
