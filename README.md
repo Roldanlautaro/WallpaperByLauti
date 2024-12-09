@@ -37,7 +37,6 @@ El proyecto fue desarrollado utilizando las siguientes tecnologías y herramient
 - **Base de datos**: MySQL.
 - **Frameworks y librerías**:
   - Bootstrap (diseño responsivo).
-  - Dropzone (gestión de subida de imágenes).
   - SweetAlert2 (alertas interactivas).
   - DataTables (tablas dinámicas para la sección de administración).
 
