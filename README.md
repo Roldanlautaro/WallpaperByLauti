@@ -73,5 +73,55 @@ Durante el desarrollo de este proyecto, adquirí y reforcé conocimientos en:
 - **Diseño responsivo**: Garantizar que la aplicación se vea bien en dispositivos de diferentes tamaños.
 
 ---
+---
+
+## ⚙️ ¿Cómo instalar y usar el proyecto?
+
+### Requisitos previos
+
+1. Tener instalado **[XAMPP](https://www.apachefriends.org/es/index.html)**.
+2. Tener un navegador web (como Google Chrome).
+3. Descargar el proyecto desde este repositorio.
+
+### Pasos para la configuración
+
+1. **Descarga y descomprime el proyecto**:
+   - Descarga el proyecto desde GitHub como archivo ZIP o clónalo con Git:
+     ```bash
+     git clone https://github.com/Roldanlautaro/WallpaperByLauti.git
+     ```
+   - Copia la carpeta del proyecto a la ruta:  
+     ```
+     C:\xampp\htdocs\
+     ```
+
+2. **Configura la base de datos**:
+   - Inicia XAMPP y activa los módulos **Apache** y **MySQL**.
+   - Abre **phpMyAdmin** desde `http://localhost/phpmyadmin`.
+   - Crea una base de datos llamada `wallpaperbylauti`.
+   - Importa el archivo SQL del proyecto:
+     - Ve a la pestaña **Importar**.
+     - Selecciona el archivo `wallpaperbylauti.sql` ubicado en la carpeta del proyecto.
+     - Haz clic en **Continuar**.
+
+3. **Configura las credenciales de la base de datos**:
+   - Abre el archivo `config.php` en el directorio raíz del proyecto.
+   - Asegúrate de que las credenciales coincidan con tu configuración de XAMPP:
+     ```php
+     <?php
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "wallpaperbylauti";
+     ?>
+     ```
+
+4. **Ejecuta el proyecto**:
+   - Abre tu navegador y ve a:  
+     ```
+     http://localhost/WallpaperByLauti
+     ```
+
+---
 
 ¡Espero que disfrutes explorando este proyecto tanto como yo disfruté creándolo! 😄
