@@ -1,11 +1,11 @@
 <?php
-include "../basededatos/conexion.php";  // Ruta relativa a conexion.php
+include "../basededatos/conexion.php";  
 
 session_start();
 
 // Verifica si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario'])) {
-    echo "<script type='text/javascript'>location.href='../indexlogin.php';</script>";  // Ruta relativa
+    echo "<script type='text/javascript'>location.href='../indexlogin.php';</script>";  
     exit();
 }
 
@@ -13,7 +13,7 @@ if (!isset($_SESSION['usuario'])) {
 if ($_SESSION['tipo_usuario'] != 1) {
     echo "<script type='text/javascript'>
         alert('Acceso denegado: No tienes permisos para acceder a esta página.');
-        location.href = '../indexlogin.php';  // Ruta relativa
+        location.href = '../indexlogin.php';  
     </script>";
     exit();
 }
@@ -29,14 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, $checkUserQuery);
 
     if (mysqli_num_rows($result) > 0) {
-        echo "<script>alert('El usuario ya existe'); window.location.href = 'indexadmin.php';</script>";  // Ruta relativa
+        echo "<script>alert('El usuario ya existe'); window.location.href = 'indexadmin.php';</script>";  
     } else {
         // Guarda la contraseña en texto plano
         $sql = "INSERT INTO usuarios (usuario, clave, tipo_usuario) VALUES ('$username', '$password', '$tipo_usuario')";
         if (mysqli_query($conn, $sql)) {
-            echo "<script>alert('Usuario registrado con éxito'); window.location.href = 'indexadmin.php';</script>";  // Ruta relativa
+            echo "<script>alert('Usuario registrado con éxito'); window.location.href = 'indexadmin.php';</script>";  
         } else {
-            echo "<script>alert('Error al registrar el usuario: " . mysqli_error($conn) . "'); window.location.href = 'indexadmin.php';</script>";  // Ruta relativa
+            echo "<script>alert('Error al registrar el usuario: " . mysqli_error($conn) . "'); window.location.href = 'indexadmin.php';</script>";  
         }
     }
 }
