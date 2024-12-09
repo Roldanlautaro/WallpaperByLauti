@@ -45,25 +45,25 @@ El proyecto fue desarrollado utilizando las siguientes tecnologías y herramient
 ## 📸 Capturas de pantalla
 
 ### Pantalla de inicio
-![Inicio](![Screenshot 2024-12-09 193202](https://github.com/user-attachments/assets/e4a81e79-9f99-4921-964a-472698bd819b))
+![Inicio](https://github.com/user-attachments/assets/e4a81e79-9f99-4921-964a-472698bd819b))
 
-### Sección móvil
-![Móvil]![Screenshot 2024-12-09 193411](https://github.com/user-attachments/assets/88776196-5f17-4429-b39a-c177014fb3f1)
+### Pantalla móvil
+![Móvil](https://github.com/user-attachments/assets/88776196-5f17-4429-b39a-c177014fb3f1)
 
-### Sección Escritorio
-![Móvil]![Screenshot 2024-12-09 193411](https://github.com/user-attachments/assets/88776196-5f17-4429-b39a-c177014fb3f1)
+### Pantalla Escritorio
+![Móvil](https://github.com/user-attachments/assets/88776196-5f17-4429-b39a-c177014fb3f1)
 
-### Sección Descarga
-![Móvil]![Screenshot 2024-12-09 193411]![Screenshot 2024-12-09 193214](https://github.com/user-attachments/assets/617f1f8b-3950-41a2-b785-e6a3c5537aa6)
+### Pantalla Descarga
+![Móvil](https://github.com/user-attachments/assets/617f1f8b-3950-41a2-b785-e6a3c5537aa6)
 
 
-### Sección Tabla Admin
-![Móvil]![Screenshot 2024-12-09 193411]![Screenshot 2024-12-09 193544](https://github.com/user-attachments/assets/83a9834e-9d83-4190-8c79-bcce7b39028f)
+### Pantalla Tabla Admin
+![Móvil](https://github.com/user-attachments/assets/83a9834e-9d83-4190-8c79-bcce7b39028f)
 
 
 
 ### Perfil de usuario
-![Perfil]![Screenshot 2024-12-09 193400](https://github.com/user-attachments/assets/41a3f3dc-8f2a-4732-9022-32ba9a0d6d09)
+![Perfil](https://github.com/user-attachments/assets/41a3f3dc-8f2a-4732-9022-32ba9a0d6d09)
 
 
 ---
