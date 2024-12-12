@@ -85,7 +85,6 @@ Durante el desarrollo de este proyecto, adquirí y reforcé conocimientos en:
 - **Diseño responsivo**: Garantizar que la aplicación se vea bien en dispositivos de diferentes tamaños.
 
 ---
----
 
 ## ⚙️ ¿Cómo instalar y usar el proyecto?
 
